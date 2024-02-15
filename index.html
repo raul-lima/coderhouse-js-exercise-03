@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var isOn = true;
+
+      while (isOn) {
+        alert("Laço while \nSoma e média de dois valores");
+        var valorUm = parseInt(prompt("Insira o primeiro valor: "));
+        var valorDois = parseInt(prompt("Insira o segundo valor: "));
+        var soma = valorUm + valorDois;
+        var media = soma / 2;
+        alert("A soma entre os números é: " + soma);
+        alert("A média entre os números é: " + media);
+        var repetir = prompt("Deseja repetir a operação? \n S/N").toUpperCase();
+        if (repetir != "S" && repetir != "N") {
+          repetir = prompt("Comando inválido. Digite 'S' ou 'N'");
+        }
+        if (repetir == "N") {
+          isOn = false;
+        }
+      }
+
+      alert("Laço for \nCálculo das parcelas de um valor");
+      var valor = parseInt(prompt("Digite o valor total"));
+      var parcelas = parseInt(prompt("Digite o número de parcelas"));
+
+      var parcela = (valor / parcelas).toFixed(2);
+
+      for (var i = 1; i <= parcelas; i++) {
+        console.log("Parcela " + i + ": " + parcela);
+      }
+
+      alert("Verifique o console para ver o laço for");
+      alert("Serão " + parcelas + " parcelas de " + parcela);
+    </script>
+  </head>
+  <body></body>
+</html>
